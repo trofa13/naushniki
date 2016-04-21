@@ -1,0 +1,267 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		title 
+			|Магазин Naushniki
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css")
+		link(rel="stylesheet", href="style.css")
+		script(src="//code.jquery.com/jquery-2.2.1.min.js")
+		script(src="/libs/js/jquery.columnizer.js")
+
+
+	body
+		.main-wrapper
+			include common/_header
+			section.main-info
+				.img-block
+					.main-img
+						img(src="img/airbeats-big1.jpg", alt="AirBeats")
+					.previews		
+						.preview-img__wrapper
+							img(src="img/airbeats-small1.jpg", alt="SmallBeats1", class="preview-img")
+						.preview-img__wrapper.active
+							img(src="img/airbeats-big1.jpg", alt="SmallBeats2", class="preview-img")
+				.text-block
+					h1.product-name
+						|Beats PowerBeats 2 (черно-красный)
+					.price-line
+						span.price
+							|3690 руб.
+						span.old-price
+							|4790 руб.
+						a(href="#", class="buy-btn")
+							|Купить
+					.left-side
+						.available-colors
+							|Доступные цвета
+							.switcher-wrapper
+								.color.red-black.active
+								.color.grey
+								.color.black-red
+						.features
+							ul.features-list
+								li.features-list__item
+									|Вид наушников - вкладыши
+								li.features-list__item
+									|Тип подключения - Bluetooth
+								li.features-list__item
+									|Акустическое оформление - закрытое
+								li.features-list__item
+									|Есть микрофон
+								li.features-list__item
+									|Регулятор громкости
+					.right-side
+						h2.decription-header
+							|Описание модели
+						p.description-text
+							|Точная реплика (включая валидность серийного номера) блютуз наушников для спорта Powerbeats 2 Wireless. Спроектированы специалистами компании для абсолютного удобства и комфорта обладателя. Восхитительное звучание, которым могут обладать только беспроводные наушники Beats с глубокими басами и четкими высокими частотами, высокоточное изготовление корпуса наушников, пото- и влагозащита. Ушные дуги имеют специальный запатентованный механизм, облегчающий надевание наушников. Дизайн переключателя громкости оптимизирован для нажатия на бегу. Держа в руках эту модель блутуз наушников, понимаешь, что они, пожалуй, лучшие bluetooth наушники на сегодня. На создание этой серии специалистов Beats и лично Dr.Dre воодушевила блистательная карьера и упорные тренировки баскетболиста LeBron James.
+			section.description
+				.full-features__wrapper
+					h3.full-features__header
+						|Полные технические характеристики:
+					.full-features
+						ul.full-features__list
+							- var options = {'Сопротивление (impedance):': "16 Ω", 'Батарея (мАч):' : "150", "Рабочее расстояние:" : "до 10 м", "Частотный диапазон:" : "20 Гц-20 кГц", "Микрофон:" : "Есть", "Возможность принимать звонки:" : "Имеется", "Время зарядки (ч):" : "1", "Время в режиме прослушивания музыки (ч):" : "6", "Время в режиме разговора (ч):" : "6", "Время в режиме ожидания (ч):" : "150", "Вес (гр):" : "24"}
+							- for (item in options)
+								li.full-features__item
+									span.full-features__item-key= item
+									span.dots
+									span.full-features__item-value= options[item]
+				.advantages
+					h4.advanteges__header
+						|Преимущества наушников Beats PowerBeats 2 Wireless:
+					-var items=["Разработаны при участии баскетболиста NBA Леброна Джеймса.", "Фирменное звучание Beats с насыщенными басами.", "Беспроводное подключение к любым аудио устройствам по средствам Bluetooth.", "Регулируемое заушное крепление, позволяющее использовать наушники при занятии спортом.", "Защита наушников от попадания пота и влаги.", "Раздельные динамики для средних и низких частот для качественного звучания.", "Встроенный микрофон."]
+						ul.advantages__list
+							each item in items
+								li.advantages__item=item
+					h5.advanteges__header
+						|Созданы специально для занятий спортом
+					p.advantages__paragraph
+						|Наушники PowerBeats 2 подходят для занятия практическим любым видом спорта, включая экстремальные. Регулируемые гибкие душки надежно держат наушники – они не свалится при прыжках, во время бега или от резкого поворота головы.
+					h5.advanteges__header
+						|Эксклюзивные технологии Beats для непревзойденного звучания
+					p.advantages__paragraph
+						|Благодаря технологиям Beats достигается ясный и объемный звук, плотный бас, плавная передача вокала и четкие высокие частоты.
+					h5.advanteges__header
+						|Наслаждайтесь музыкой и следите за тем, что происходит вокруг
+					p.advantages__paragraph
+						|В наушниках PowerBeats 2 вы можете работать, стрелять, бегать в парке или нестись на велосипеде максимально безопасно. Конструкция динамиков позволяет слышать все, что происходит вокруг
+					h5.advanteges__header
+						|Beats PowerBeats работают в любых условиях
+					p.advantages__paragraph
+						|Прочность и долговечность наушников проверена в самых экстремальных ситуациях. Защита от ультрафиолета позволяет использовать их в самую жаркую погоду.
+					h5.advanteges__header
+						|Без проводов и без потерь
+					p.advantages__paragraph
+						|Благодаря фирменной технологии Beats и последним разработкам в области технологии BlueTooth, наушники PowerBeats 2 Wireless позволяют передавать звук «по воздуху» без потери качества во всем диапазоне.
+					h5.advanteges__header
+						|Встроенный микрофон
+					p.advantages__paragraph
+						|PowerBeats 2 можно использовать в качестве гарнитуры для телефона. Функция ControlTalk позволяет совершать звонки с помощью встроенного микрофона.
+			section.reviews-section
+				h3.reviews__header
+					|Отзывы
+				ul.reviews__list
+					li.reviews__item
+						span.review__name
+							|Анатолий,
+						span.review__date
+							|19.12.2015
+						span.review__stars
+							i(class="fa fa-star" aria-hidden="true")
+							i(class="fa fa-star" aria-hidden="true")
+							i(class="fa fa-star" aria-hidden="true")
+							i(class="fa fa-star" aria-hidden="true")
+							i(class="fa fa-star" aria-hidden="true")
+						p.review__text
+							|Не ожидал что качество будет настолько хорошей для реплики! Спасибо за оперативную доставку! Мои рекомендации!
+					li.reviews__item
+						span.review__name
+							|Мария Сысоева,
+						span.review__date
+							|1.11.2015
+						span.review__stars
+							i(class="fa fa-star" aria-hidden="true")
+							i(class="fa fa-star" aria-hidden="true")
+							i(class="fa fa-star" aria-hidden="true")
+							i(class="fa fa-star" aria-hidden="true")
+							i(class="fa fa-star" aria-hidden="true")
+						p.review__text
+							|Очень стильные и качественные!!звук отменный!!Спасибо за оперативную доставку!
+
+				h3.reviews__header
+					|Добавить отзыв
+				form(class="review-add-form" name="review-add")
+					input(type="text" required class="name-input" placeholder="Ваше имя")
+					.radio-wrapper
+						|Ваша оценка:
+						input(type="radio" name="stars" value="1" id="stars1" class="stars-amount")
+						label(for="stars1" class="stars1")
+						input(type="radio" name="stars" value="2" id="stars2" class="stars-amount")
+						label(for="stars2" class="stars2")
+						input(type="radio" name="stars" value="3" id="stars3" class="stars-amount")
+						label(for="stars3" class="stars3")
+						input(type="radio" name="stars" value="4" id="stars4" class="stars-amount")
+						label(for="stars4" class="stars4")
+						input(type="radio" name="stars" value="5" id="stars5" class="stars-amount")
+						label(for="stars5" class="stars5")
+					textarea(class="review-text" required name="text" placeholder="Ваш отзыв")
+					a.add-review__button
+						|Добавить отзыв
+		section.order-info
+			h5.form__header
+				|Тестовая форма
+			form.test-form
+				.input__wrapper
+					label(for="name" class="input__label")
+						|ФИО
+					.input__inner
+						input(type="text" id="name" class="form__input" placeholder="Введите ФИО")
+						span.annotation
+							|Да, нужно ввести ФИО
+				.input__wrapper
+					label(for="phone" class="input__label")
+						|Телефон
+					.input__inner
+						input(type="phone" id="phone" class="form__input" placeholder="+7 903 999 99 99")				
+						span.annotation.phone__annotation
+							|А сюда нужно ввести телефон
+				.input__wrapper
+					label(for="email" class="input__label")
+						|E-mail
+					.input__inner
+						input(type="email" id="email" class="form__input" placeholder="test@example.ru")				
+						span.annotation
+							|Внимание! Введя электронную почту, к которой у Вас нет доступа вы не сможете подтвердить заказ.
+				.input__wrapper
+					label(for="additional-info" class="input__label")
+						|Телефон
+					.input__inner
+						textarea(type="text" id="additional-info" class="form__input" placeholder="Введите сюда то, с чем Вы считаете нам необходимо ознакомиться")
+						textarea(type="text" class="form__input additional-info" readonly placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vero non laborum doloremque quas consectetur, et totam minus modi cupiditate omnis recusandae, beatae laudantium corporis velit reprehenderit fuga magnam libero!")
+						span.annotation
+							|But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?	
+				.input__wrapper			
+					label(for="nonsense")
+						|Quo vadis?
+					.input__inner
+						.radio__wrapper
+							input(type="radio" name="nonsense" id="Veni" class="order__radio")
+							label(for="Veni")
+								|Veni
+						.radio__wrapper
+							input(type="radio" name="nonsense" id="Vedi" value="Vedi" class="order__radio")
+							label(for="Vedi")
+								|Vedi
+						.radio__wrapper
+							input(type="radio" name="nonsense" id="Vici" value="Vici" class="order__radio")
+							label(for="Vici")
+								|Vici
+						.radio__wrapper
+							input(type="radio" name="nonsense" id="Errare" value="Errare Humanum est" class="order__radio")
+							label(for="Errare")
+								|Errare Humanum est
+						.checkbox__wrapper
+							input(type="checkbox" id="smth" class="order__checkbox" value="Temporibus autem quibusdam et aut officiis debitis aut rerum" required)
+							label(for="smth")
+								|Temporibus autem quibusdam et aut officiis debitis aut rerum
+				h6.delivery-choose
+					|Выбор доставки
+				.delivery-choose--radio__wrapper
+					input(type="radio" checked name="delivery" id="courier" value="courier" class="delivery-choose__radio")
+					label(for="courier")
+						|  Курьером
+				.delivery-choose--radio__wrapper
+					input(type="radio" name="delivery" id="self" value="self" class="delivery-choose__radio")
+					label(for="self")
+						|  Самовывоз
+				.delivery-type__self
+					h6.delivery-choose
+						|Самовывоз заказа
+					.input__wrapper
+						select(name="self-point" required class="form__select")
+							option(selected)
+								|Выберите пункт самовывоза
+							option(value="moscow")
+								|Москва
+							option(value="spb")
+								|Санкт-Петербург
+					.input__wrapper
+						textarea(name="strange" required class="form__textarea" placeholder="Вы удивлены почему часть формы написана на латыни?")
+				.delivery-type__courier
+					h6.delivery-choose
+						|Доставка курьером
+					.input__wrapper
+						.input__inner
+							input(type="text" class="form__input" required placeholder="Улица")
+					.input__wrapper
+						.input__inner
+							input(type="text" class="form__input" required placeholder="Дом")
+					.input__wrapper
+						.input__inner
+							input(type="text" class="form__input" placeholder="Подъезд")
+					.input__wrapper
+						.input__inner
+							input(type="text" class="form__input" placeholder="Домофон")
+					.input__wrapper
+						.input__inner
+							input(type="text" class="form__input" placeholder="Этаж")
+					.input__wrapper
+						.input__inner
+							input(type="text" class="form__input" placeholder="Квартира")
+					.input__wrapper
+						.input__inner
+							input(type="text" class="form__input" placeholder="Корпус или строение")
+							span.annotation
+								|(если есть)
+					.input__wrapper
+						.input__inner
+							textarea(type="text" required class="form__input" placeholder="Вы удивлены почему часть формы написана на латыни?")
+				button.forward
+					|Вперед →
+
+		script(src="main.js")
+
