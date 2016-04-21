@@ -166,7 +166,7 @@ html
 					label(for="phone" class="input__label")
 						|Телефон
 					.input__inner
-						input(type="phone" id="phone" class="form__input" placeholder="+7 903 999 99 99")				
+						input(type="tel" id="phone" class="form__input" placeholder="+7 903 999 99 99")				
 						span.annotation.phone__annotation
 							|А сюда нужно ввести телефон
 				.input__wrapper
@@ -181,7 +181,7 @@ html
 						|Телефон
 					.input__inner
 						textarea(type="text" id="additional-info" class="form__input" placeholder="Введите сюда то, с чем Вы считаете нам необходимо ознакомиться")
-						textarea(type="text" class="form__input additional-info" readonly placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vero non laborum doloremque quas consectetur, et totam minus modi cupiditate omnis recusandae, beatae laudantium corporis velit reprehenderit fuga magnam libero!")
+						textarea(class="form__input additional-info" readonly placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vero non laborum doloremque quas consectetur, et totam minus modi cupiditate omnis recusandae, beatae laudantium corporis velit reprehenderit fuga magnam libero!")
 						span.annotation
 							|But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?	
 				.input__wrapper			
@@ -223,14 +223,14 @@ html
 						|Самовывоз заказа
 					.input__wrapper
 						select(name="self-point" required class="form__select")
-							option(selected)
+							option(selected value="")
 								|Выберите пункт самовывоза
 							option(value="moscow")
 								|Москва
 							option(value="spb")
 								|Санкт-Петербург
 					.input__wrapper
-						textarea(name="strange" required class="form__textarea" placeholder="Вы удивлены почему часть формы написана на латыни?")
+						textarea(name="strange"  class="form__textarea" placeholder="Вы удивлены почему часть формы написана на латыни?")
 				.delivery-type__courier
 					h6.delivery-choose
 						|Доставка курьером
@@ -259,7 +259,7 @@ html
 								|(если есть)
 					.input__wrapper
 						.input__inner
-							textarea(type="text" required class="form__input" placeholder="Вы удивлены почему часть формы написана на латыни?")
+							textarea(required class="form__input" placeholder="Вы удивлены почему часть формы написана на латыни?")
 				button.forward
 					|Вперед →
 
